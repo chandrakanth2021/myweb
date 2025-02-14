@@ -9,9 +9,11 @@
 	<url>http://maven.apache.org</url>
 	
 	<properties>
-		<docker.image.prefix>kammana</docker.image.prefix>
-		<sonar.host.url>http://52.55.88.19:9000/</sonar.host.url>
-
+		<docker.image.prefix>kammas</docker.image.prefix>
+                <sonar.host.url>http://52.55.88.19:9000/</sonar.host.url>
+                <maven.compiler.source>11</maven.compiler.source>  <!-- Add this line -->
+                <maven.compiler.target>11</maven.compiler.target>  <!-- Add this line -->
+		
 	</properties>
 	<dependencies>
 
@@ -44,6 +46,21 @@
 		<url>http://repo1.maven.org/maven2</url>
 	    </pluginRepository>
 	</pluginRepositories>
+	
+<build>
+    <plugins>
+        <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-compiler-plugin</artifactId>
+            <version>3.8.1</version>  <!-- Ensure this version is recent -->
+            <configuration>
+                <source>11</source>  <!-- Change this based on your installed Java version -->
+                <target>11</target>
+            </configuration>
+        </plugin>
+    </plugins>
+</build>
+</project>
 
 	
-</project>
+
