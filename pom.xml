@@ -64,6 +64,16 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-war-plugin</artifactId>
             <version>3.3.1</version>  <!-- Change from 2.2 to 3.3.1 -->
+<executions>
+    <execution>
+        <id>default-compile</id>
+        <phase>compile</phase>
+        <goals>
+            <goal>compile</goal>
+        </goals>
+    </execution>
+</executions>
+
 	    
         </plugin>
     </plugins>
